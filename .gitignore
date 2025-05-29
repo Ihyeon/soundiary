@@ -1,0 +1,20 @@
+# === 공통 ===
+*.log
+.DS_Store
+Thumbs.db
+
+# === 백엔드 (Spring Boot) ===
+/backend/build/
+/backend/.gradle/
+/backend/.idea/
+/backend/out/
+*.class
+*.jar
+*.war
+/backend/src/main/resources/application.properties
+
+# === 프론트엔드 (React + Vite) ===
+/frontend/node_modules/
+/frontend/dist/
+/frontend/.vite/
+*.env
