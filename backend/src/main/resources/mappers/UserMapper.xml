@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.soundiary.mapper.UserMapper">
+
+    <select id="findById" resultType="com.soundiary.domain.User">
+        SELECT *
+        FROM user
+        WHERE user_id = #{id}
+    </select>
+
+    <insert id="insert" parameterType="com.soundiary.domain.User">
+        INSERT INTO user (password, nickname, created_at, phone_number, address, birth, gender, email)
+        VALUES (#{password}, #{nickname}, NOW(), #{phoneNumber}, #{address}, #{birth}, #{gender}, #{email})
+    </insert>
+
+</mapper>
