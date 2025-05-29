@@ -1,4 +1,4 @@
-# SOUNDiary 🎵
+# 🎵 SOUNDiary 
 
 ## ⚙️ 기술 스택
 
