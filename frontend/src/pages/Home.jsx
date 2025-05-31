@@ -1,5 +1,7 @@
+import styles from "./Home.module.css";
+
 function Home() {
-    return <h1>홈 화면</h1>;
+    return <div className={styles.container}>Main</div>;
 }
 
 export default Home;

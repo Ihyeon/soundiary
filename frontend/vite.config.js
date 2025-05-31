@@ -1,7 +1,16 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import react from "@vitejs/plugin-react";
+import path, { dirname } from "path"; // 경로 처리 유틸
+import { fileURLToPath } from "url"; // ESM에서 경로 가져오기용
+import { defineConfig } from "vite";
 
-// https://vite.dev/config/
+const __filename = fileURLToPath(import.meta.url); // 현재 파일의 실제 경로
+const __dirname = dirname(__filename); // 그 파일이 들어있는 폴더 경로
+
 export default defineConfig({
-  plugins: [react()],
-})
+    plugins: [react()],
+    resolve: {
+        alias: {
+            "@": path.resolve(__dirname, "src"),
+        },
+    },
+});

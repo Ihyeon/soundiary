@@ -1,11 +1,11 @@
 CREATE TABLE GENRE (
                        GENRE_ID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-                       GENRE_NAME VARCHAR(50) NOT NULL
+                       NAME VARCHAR(50) NOT NULL
 );
 
 CREATE TABLE ARTIST (
                         ARTIST_ID BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-                        ARTIST_NAME VARCHAR(50) NOT NULL,
+                        NAME VARCHAR(50) NOT NULL,
                         DEBUT_DATE DATE,
                         GENDER CHAR(1) CHECK (GENDER IN ('A', 'F', 'M')),
                         BIRTH DATE
@@ -13,10 +13,10 @@ CREATE TABLE ARTIST (
 
 CREATE TABLE MUSIC_ALBUM (
                              ALBUM_ID BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-                             ALBUM_TITLE VARCHAR(100) NOT NULL,
+                             TITLE VARCHAR(100) NOT NULL,
                              RELEASE_DATE DATE,
-                             ALBUM_THUMBNAIL_URL VARCHAR(255),
-                             ALBUM_AVERAGE_RATING FLOAT,
+                             THUMBNAIL_URL VARCHAR(255),
+                             AVERAGE_RATING FLOAT,
                              ARTIST_ID BIGINT NOT NULL,
                              CREATED_AT DATETIME DEFAULT CURRENT_TIMESTAMP,
                              FOREIGN KEY (ARTIST_ID) REFERENCES ARTIST(ARTIST_ID)
@@ -44,7 +44,7 @@ CREATE TABLE SEARCH_HISTORY (
 
 CREATE TABLE MUSIC (
                        MUSIC_ID BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-                       MUSIC_TITLE VARCHAR(100) NOT NULL,
+                       TITLE VARCHAR(100) NOT NULL,
                        YOUTUBE_URL VARCHAR(255),
                        AVERAGE_RATING FLOAT,
                        GENRE_ID INT NOT NULL,
@@ -98,7 +98,7 @@ CREATE TABLE RECOMMEND_RESULT (
 
 CREATE TABLE PLAYLIST (
                           PLAYLIST_ID BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-                          PLAYLIST_TITLE VARCHAR(100) NOT NULL,
+                          TITLE VARCHAR(100) NOT NULL,
                           CREATED_AT DATETIME DEFAULT CURRENT_TIMESTAMP,
                           USER_ID BIGINT NOT NULL,
                           FOREIGN KEY (USER_ID) REFERENCES USERS(USER_ID)

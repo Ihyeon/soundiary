@@ -1,0 +1,38 @@
+:root {
+      /* Font Weights */
+    --font-weight-light: 300;
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-bold: 600;
+
+    /* Font Sizes (선택) */
+    --font-size-sm: 0.875rem;
+    --font-size-base: 1rem;
+    --font-size-lg: 1.125rem;
+
+    /* Main colors */
+    --color-primary: #2dd4bf;        
+    --color-primary-dark: #0f766e; 
+
+    /* Text and background */
+    --color-bg: #ffffff;
+    --color-text: #1f2937;            /* slate-800 */
+    --color-text-light: #6b7280;      /* slate-500 */
+    --color-text-inverse: #fff;
+
+    /* Accent */
+    --color-accent: #10b981;        
+
+    /* Error, Success, Warning */
+    --color-error: #ef4444;
+    --color-success: #22c55e;
+    --color-warning: #facc15;
+
+    /* Border & Neutral */
+    --color-border: #e5e7eb;
+}
+
+/* [data-theme="dark"] {
+    --bg-color: #121212;
+    --text-color: white;
+} */
