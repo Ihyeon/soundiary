@@ -11,7 +11,7 @@
         WHERE user_id = #{id}
     </select>
 
-    <insert id="insert" parameterType="com.soundiary.domain.User">
+    <insert id="insert" parameterType="com.soundiary.domain.User" useGeneratedKeys="true" keyProperty="userId">
         INSERT INTO user (password, nickname, created_at, phone_number, address, birth, gender, email)
         VALUES (#{password}, #{nickname}, NOW(), #{phoneNumber}, #{address}, #{birth}, #{gender}, #{email})
     </insert>
