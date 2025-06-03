@@ -1,26 +1,26 @@
 :root {
-      /* Font Weights */
+      /* 폰트 굵기 */
     --font-weight-light: 300;
     --font-weight-regular: 400;
     --font-weight-medium: 500;
     --font-weight-bold: 600;
 
-    /* Font Sizes (선택) */
+    /* 폰트 크기 */
     --font-size-sm: 0.875rem;
     --font-size-base: 1rem;
     --font-size-lg: 1.125rem;
 
-    /* Main colors */
+    /* 메인 */
     --color-primary: #2dd4bf;        
     --color-primary-dark: #0f766e; 
 
-    /* Text and background */
+    /* 텍스트 */
     --color-bg: #ffffff;
     --color-text: #1f2937;            /* slate-800 */
     --color-text-light: #6b7280;      /* slate-500 */
     --color-text-inverse: #fff;
 
-    /* Accent */
+    /* 강조 */
     --color-accent: #10b981;        
 
     /* Error, Success, Warning */
@@ -28,8 +28,12 @@
     --color-success: #22c55e;
     --color-warning: #facc15;
 
-    /* Border & Neutral */
-    --color-border: #e5e7eb;
+    /* 보더 */
+    --color-border: #d8dedd;
+
+    /* 버튼 */
+    --btn-color-primary: #2dd4bf;
+    --btn-color-basic: #eff1f0;
 }
 
 /* [data-theme="dark"] {

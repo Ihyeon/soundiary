@@ -5,10 +5,10 @@
 
 <mapper namespace="com.soundiary.mapper.UserMapper">
 
-    <select id="findById" resultType="com.soundiary.domain.User">
+    <select id="findByEmail" resultType="com.soundiary.domain.User">
         SELECT *
         FROM user
-        WHERE user_id = #{id}
+        WHERE email = #{email}
     </select>
 
     <insert id="insert" parameterType="com.soundiary.domain.User" useGeneratedKeys="true" keyProperty="userId">
